@@ -25,6 +25,12 @@ public class Ret<T> {
         return new Ret<>();
     }
 
+    public static <Void> Ret<Void> success(String msg) {
+        Ret<Void> ret = new Ret<>();
+        ret.setMsg(msg);
+        return ret;
+    }
+
     public static <T> Ret<T> success(T data) {
         Ret<T> ret = new Ret<>();
         ret.setData(data);
