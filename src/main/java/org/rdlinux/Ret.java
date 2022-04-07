@@ -21,28 +21,54 @@ public class Ret<T> {
      */
     private String traceId;
 
+    /**
+     * 返回成功结果
+     */
     public static <Void> Ret<Void> success() {
         return new Ret<>();
     }
 
+    /**
+     * 返回成功结果
+     *
+     * @param msg 消息
+     */
     public static <Void> Ret<Void> success(String msg) {
         Ret<Void> ret = new Ret<>();
         ret.setMsg(msg);
         return ret;
     }
 
+    /**
+     * 返回成功结果
+     *
+     * @param data 数据
+     */
     public static <T> Ret<T> success(T data) {
         Ret<T> ret = new Ret<>();
         ret.setData(data);
         return ret;
     }
 
+    /**
+     * 返回成功结果
+     *
+     * @param msg  消息
+     * @param data 数据
+     */
     public static <T> Ret<T> success(String msg, T data) {
         Ret<T> ret = success(data);
         ret.setMsg(msg);
         return ret;
     }
 
+    /**
+     * 返回失败结果
+     *
+     * @param code 错误码
+     * @param msg  消息
+     * @param data 数据
+     */
     public static <T> Ret<T> fail(int code, String msg, T data) {
         Ret<T> ret = new Ret<>();
         ret.setCode(code);
@@ -51,10 +77,21 @@ public class Ret<T> {
         return ret;
     }
 
+    /**
+     * 返回失败结果
+     *
+     * @param code 错误码
+     * @param msg  消息
+     */
     public static <T> Ret<T> fail(int code, String msg) {
         return fail(code, msg, null);
     }
 
+    /**
+     * 返回失败结果
+     *
+     * @param msg 消息
+     */
     public static <T> Ret<T> fail(String msg) {
         return fail(500, msg, null);
     }
