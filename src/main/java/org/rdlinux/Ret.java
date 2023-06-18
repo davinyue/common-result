@@ -33,7 +33,7 @@ public class Ret<T> {
      *
      * @param msg 消息
      */
-    public static <Void> Ret<Void> success(String msg) {
+    public static <Void> Ret<Void> msg(String msg) {
         Ret<Void> ret = new Ret<>();
         ret.setMsg(msg);
         return ret;
@@ -56,7 +56,7 @@ public class Ret<T> {
      * @param msg  消息
      * @param data 数据
      */
-    public static <T> Ret<T> success(String msg, T data) {
+    public static <T> Ret<T> success(T data, String msg) {
         Ret<T> ret = success(data);
         ret.setMsg(msg);
         return ret;
