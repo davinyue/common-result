@@ -6,7 +6,7 @@ package org.rdlinux;
 public class ErrorCodeException extends RuntimeException {
     private static final long serialVersionUID = 7269868409516147549L;
     /**
-     * 移除编码
+     * 异常编码
      */
     private int errorCode;
 

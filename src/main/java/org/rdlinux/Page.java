@@ -2,6 +2,9 @@ package org.rdlinux;
 
 import java.util.List;
 
+/**
+ * 分页数据
+ */
 public class Page<T> {
     /**
      * 当前页
