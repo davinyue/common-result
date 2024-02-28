@@ -20,6 +20,9 @@ public class Page<T> {
      */
     private List<T> data;
 
+    public Page() {
+    }
+
     public Page(PageParam pageParam, int total, List<T> data) {
         this.currentPage = pageParam.getCurrentPage();
         this.pageSize = pageParam.getPageSize();
@@ -38,31 +41,35 @@ public class Page<T> {
         return this.currentPage;
     }
 
-    public void setCurrentPage(Integer currentPage) {
+    public Page<T> setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
+        return this;
     }
 
     public Integer getPageSize() {
         return this.pageSize;
     }
 
-    public void setPageSize(Integer pageSize) {
+    public Page<T> setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
+        return this;
     }
 
     public Integer getTotal() {
         return this.total;
     }
 
-    public void setTotal(Integer total) {
+    public Page<T> setTotal(Integer total) {
         this.total = total;
+        return this;
     }
 
     public List<T> getData() {
         return this.data;
     }
 
-    public void setData(List<T> data) {
+    public Page<T> setData(List<T> data) {
         this.data = data;
+        return this;
     }
 }

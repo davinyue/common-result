@@ -6,7 +6,7 @@
     <packaging>jar</packaging>
     <groupId>org.rdlinux</groupId>
     <artifactId>common-result</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
 
     <name>common-result</name>
     <url>https://github.com/davinyue/common-result</url>
